@@ -1,31 +1,22 @@
-# gestor_de_contreasenas
-Un sistema de consola robusto y profesional desarrollado en Python para la gestión segura de credenciales de usuario. Este proyecto simula un entorno real de administración de datos aplicando arquitecturas de datos avanzadas e interactividad dinámica.
+# 🔐 Gestor de Contraseñas Inteligente (CRUD Backend)
 
-# 🔐 Gestor de Contraseñas Interactivo (Password Manager)
+¡Bienvenido al Gestor de Contraseñas Modular! Este software fue desarrollado en Python aplicando las mejores prácticas de la programación modular y estructuras de datos dinámicas. Permite centralizar, buscar, editar y proteger credenciales de forma eficiente en consola.
 
-Un sistema de consola robusto y profesional desarrollado en Python para la gestión segura de credenciales de usuario. Este proyecto simula un entorno real de administración de datos aplicando arquitecturas de datos avanzadas e interactividad dinámica.
+## 🚀 Características y Arquitectura Básica
+El sistema fue migrado de una lógica rudimentaria de listas paralelas a una robusta estructura de **Lista de Diccionarios**, permitiendo una manipulación segura y directa de la memoria sin riesgos de desfasaje de datos.
 
-## 🚀 Características del Proyecto
+### 🛠️ Funcionalidades Implementadas (Estructura CRUD):
+1. **Create (Alta):** Registro modular mediante funciones independientes que capturan `cuenta`, `usuario` y `contraseña` blindando el sistema contra campos vacíos.
+2. **Read (Lectura General y Búsqueda):** - Listado prolijo de todos los registros en memoria mediante f-strings.
+   - Algoritmo de **Búsqueda Lineal** optimizado mediante banderas lógicas (interruptores) para localizar cuentas específicas en silencio.
+3. **Update (Modificación):** Sobreescritura dinámica de datos directamente sobre las llaves del diccionario seleccionado.
+4. **Delete (Baja):** Remoción segura de elementos mediante el método nativo `.remove()` y detención controlada con `break` para resguardar la consistencia de los índices de la lista.
 
-- **Menú Dinámico e Interactivo:** Implementación moderna de control de flujo mediante estructuras `match...case` (Python 3.10+).
-- **Estructura de Datos Profesional:** Migración de listas paralelas tradicionales a una arquitectura optimizada de **Lista de Diccionarios**, garantizando la sincronización absoluta de cada credencial (Cuenta, Usuario y Contraseña).
-- **Sanitización y Validación Defensiva:** Control estricto de entradas de usuario utilizando métodos como `.strip()` y `.title()` para prevenir anomalías en la base de datos, junto con filtros reactivos que impiden el registro de campos vacíos.
-
-## 🛠️ Tecnologías y Conceptos Aplicados
-
+## 💻 Tecnologías Utilizadas
 - **Lenguaje:** Python 3.x
-- **Estructuras de Control:** Bucles `while True`, condicionales anidados, control de flujo con `continue`.
-- **Colecciones Avanzadas:** Estructuras mutables de tipo diccionario (`dict`) embebidas dentro de colecciones de tipo lista (`list`).
+- **Estructuras:** Listas, Diccionarios nativos.
+- **Flujos de control:** Match-Case (Python 3.10+), Bucles iterativos, Banderas Booleanas.
+- **Herramientas de control:** Sanitización de cadenas con `.strip()` y `.title()`.
 
-## 📁 Estructura de Datos Interna
-
-Cada registro es empaquetado de manera independiente en un diccionario clave-valor y almacenado secuencialmente:
-
-```python
-manager = [
-    {
-        "usuario": "mail@ejemplo.com",
-        "cuenta": "Netflix",
-        "contrasena": "clave123"
-    }
-]
+---
+*Desarrollado con fines formativos bajo estándares profesionales de Code Review.*
